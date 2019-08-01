@@ -2,9 +2,10 @@
 
 #include "common.h"
 #include "cusManager.h"
+#include "dvdManager.h"
 #include "screenOut.h"
 
-enum {CUS_REG = 1, CUS_SERACH, QUIT};
+enum {CUS_REG = 1, CUS_SERACH, DVD_REG, DVD_SERACH, QUIT};
 
 int main()
 {
@@ -23,6 +24,12 @@ int main()
 				break;
 			case CUS_SERACH:
 				SearchCusInfo();
+				break;
+			case DVD_REG:
+				RegistDVD();
+				break;
+			case DVD_SERACH:
+				SearchDVDInfo();
 				break;
 		}
 

@@ -52,7 +52,6 @@ void SearchCusInfo()
 	
 	if (temp != (cusInfo*)NULL)
 	{
-		strcpy_s(ID, sizeof(ID), temp->ID);
 		ShowCustomerInfo(temp);
 	}
 	else
