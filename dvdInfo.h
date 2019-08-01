@@ -1,3 +1,5 @@
+// Visual Studio에서 작성된 코드입니다.
+
 #ifndef __DVDINFO_H__
 
 #define __DVDINFO_H__

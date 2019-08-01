@@ -37,7 +37,21 @@ void ShowDVDInfo(dvdInfo* pDVD)
 	puts("┌────────────────────────────");
 	printf("│ ▶ ISBN : %s\n", pDVD->ISBN);
 	printf("│ ▶ 제목 : %s\n", pDVD->title);
-	printf("│ ▶ 장르 : %d\n", pDVD->gerne);
+	switch (pDVD->gerne)
+	{
+		case ACTION:
+			puts("│ ▶ 장르 : 액션");
+			break;
+		case COMIC:
+			puts("│ ▶ 장르 : 코믹");
+			break;
+		case SF:
+			puts("│ ▶ 장르 : SF");
+			break;
+		case ROMANTIC:
+			puts("│ ▶ 장르 : 로맨틱");
+			break;
+	}
 	puts("└────────────────────────────");
 
 	getchar();
