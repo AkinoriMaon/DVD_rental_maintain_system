@@ -1,0 +1,9 @@
+1. common.h : ANSI 표준 헤더파일 중 자주 필요로 하는 헤더파일들의 #include 선언을 담고 있다.
+2. cusInfo.h : 고객 정보 관리를 위한 구조체 cusInfo의 선언과 정의를 담고 있다.
+3. cusInfoAccess.h : cusInfoAccess.c에 정의되어 있는 함수들의 선언을 담고 있다.
+4. cusInfoAccess.c : 고객 정보를 관리할 수 있는 최소한의 기능을 제공하는 함수들이 정의되어 있다.
+5. cusMannager.h : cusManager.c에 정의되어 있는 함수들의 선언을 담고 있다.
+6. cusMannger.c : 프로그램 사용자의 요구를 처리하는 함수들이 정의되어 있다.
+7. screenOut.h : screenOut.c에 정의되어 있는 함수들의 선언이 담겨 있다.
+8. screenOut.c : 모니터 출력을 위한 함수들이 정의되어 있다.
+9. main.c : 프로그램 사용자의 입력을 처리하도록 구현되어 있는 main함수가 정의되어 있다.
