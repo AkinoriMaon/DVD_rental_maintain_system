@@ -49,7 +49,7 @@ void SearchCusInfo()
 	gets_s(ID, ID_LEN);
 
 	temp = GetCusPtrByID(ID);
-	
+
 	if (temp != (cusInfo*)NULL)
 	{
 		ShowCustomerInfo(temp);

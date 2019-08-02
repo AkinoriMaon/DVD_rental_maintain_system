@@ -4,7 +4,7 @@
 
 #define __CUSMGR_H__
 
-int RegistCustomer();
+void RegistCustomer();
 void SearchCusInfo();
 
 #endif

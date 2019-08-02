@@ -4,7 +4,10 @@
 
 #define __DVDMGR_H__
 
-int RegistDVD();
+void RegistDVD();
 void SearchDVDInfo();
+void RentalDVD();
+void ReturnDVD();
+void ShowDVDRentAllCusInfo();
 
 #endif

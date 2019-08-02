@@ -10,5 +10,6 @@
 void ShowMenu();
 void ShowCustomerInfo(cusInfo* pCus);
 void ShowDVDInfo(dvdInfo* pDVD);
+void ShowCustomerInfoContinue(cusInfo* pCus);
 
 #endif

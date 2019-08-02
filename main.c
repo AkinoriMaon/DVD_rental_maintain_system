@@ -5,7 +5,7 @@
 #include "dvdManager.h"
 #include "screenOut.h"
 
-enum {CUS_REG = 1, CUS_SERACH, DVD_REG, DVD_SERACH, QUIT};
+enum {CUS_REG = 1, CUS_SERACH, DVD_REG, DVD_SERACH, DVD_RENT, DVD_RETURN, DVD_CUS_SERACH, QUIT};
 
 int main()
 {
@@ -30,6 +30,15 @@ int main()
 				break;
 			case DVD_SERACH:
 				SearchDVDInfo();
+				break;
+			case DVD_RENT:
+				RentalDVD();
+				break;
+			case DVD_RETURN:
+				ReturnDVD();
+				break;
+			case DVD_CUS_SERACH:
+				ShowDVDRentAllCusInfo();
 				break;
 		}
 

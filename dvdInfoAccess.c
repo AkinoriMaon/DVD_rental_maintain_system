@@ -26,6 +26,8 @@ int AddDVDInfo(char* ISBN, char* title, int gerne)
 	strcpy_s(pDVD->ISBN, ISBN_LEN, ISBN);
 	strcpy_s(pDVD->title, TITLE_LEN, title);
 	pDVD->gerne = gerne;
+	pDVD->numOfRentCus = 0;
+	pDVD->rentState = RETURNED;
 
 	dvdList[numOfDVD] = pDVD;
 
@@ -66,4 +68,35 @@ int IsRegistISBN(char* ISBN)
 	}
 
 	return 0;
+}
+
+int GetDVDRentState(char* ISBN)
+{
+	dvdInfo* temp;
+
+	temp = GetDVDPtrByISBN(ISBN);
+
+	return temp->rentState;
+}
+
+void SetDVDRented(char* ISBN, char* ID, unsigned int date)
+{
+	dvdInfo* temp;
+
+	temp = GetDVDPtrByISBN(ISBN);
+
+	strcpy_s(temp->rentList[temp->numOfRentCus].cusID, sizeof(temp->rentList[temp->numOfRentCus].cusID), ID);
+	temp->rentList[temp->numOfRentCus].rentDay = date;
+
+	temp->rentState = RENTED;
+	temp->numOfRentCus++;
+}
+
+void SetDVDReturned(char* ISBN)
+{
+	dvdInfo* temp;
+
+	temp = GetDVDPtrByISBN(ISBN);
+
+	temp->rentState = RETURNED;
 }
